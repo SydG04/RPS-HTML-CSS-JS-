@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock, Paper, Scissors</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/typeit@8.0.1/dist/index.umd.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      new TypeIt("#computer-text", {
+        speed: 75,
+        strings: ["You dare challenge me to a game of rock, paper, scissors?"], 
+      }).go();
+    });
+  </script>
+</head>
+<body>
+  <h1>Rock, Paper, Scissors</h1>
+
+  <p id="computer-text"></p>
+
+  <section class="opponents-container">
+    <div class="human-container">
+      <p class="points" id="human-points">0</p>
+      <img src="images/human.png" alt='human' id="human-img"/>
+    </div>
+    <p id="VS">vs</p>
+    <div class="computer-container">
+      <p class="points" id="computer-points">0</p>
+      <img src="images/Computer2.png" alt='computer' id="computer-image"/>
+    <a href="https://www.vecteezy.com/free-png/old-monitor" class="attributions">Old Monitor PNGs by Vecteezy</a>
+    </div>
+  </section>
+  <section class="yn-btns hidden">
+    <button id="yes">
+      Yes
+    </button>
+    <button id="no">
+      No
+    </button>
+  </section>
+  <section class="choices-conianer hidden">
+    <div class="rock-img-container">
+      <img src="images/rock.png" alt="rock" class="choices" id="rock">
+      <a href="https://www.vecteezy.com/free-png/rock" class="attributions">Rock PNGs by Vecteezy</a>
+    </div>
+    <div class="paper-img-container">
+      <img src="images/paper.png" alt="paper" class="choices" id="paper">
+      <a href="https://www.vecteezy.com/free-png/paper" class="attributions">Paper PNGs by Vecteezy</a>
+    </div>
+    <div class="scissors-img-container">
+      <img src="images/scissors.png" alt="scissors" class="choices" id="scissors">
+      <a href="https://www.vecteezy.com/free-png/scissors" class="attributions">Scissors PNGs by Vecteezy</a>
+    </div>
+  </section>
+</body>
+</html>
