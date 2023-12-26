@@ -29,6 +29,10 @@ p {
   font-family: "Press Start 2P";
 }
 
+#computer-text {
+  padding: 0 50px;
+}
+
 .opponents-container {
   margin-top: 40px;
   display: flex;
@@ -63,7 +67,6 @@ img {
 .yn-btns {
   justify-content: center;
   margin: 40px 0;
-
 }
 
 .yn-btns button {
@@ -100,12 +103,12 @@ img {
   font-size: 10px;
 }
 
-.choices-conianer {
+#choices-container {
   margin: 40px 0;
   justify-content: space-evenly;
 }
 
-.choices-conianer img:hover {
+#choices-container img:hover {
   cursor: pointer;
   background-color: rgba(211,211,211, 0.5);
 }

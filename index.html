@@ -6,14 +6,6 @@
   <title>Rock, Paper, Scissors</title>
   <link rel="stylesheet" href="styles.css">
   <script src="https://unpkg.com/typeit@8.0.1/dist/index.umd.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      new TypeIt("#computer-text", {
-        speed: 75,
-        strings: ["You dare challenge me to a game of rock, paper, scissors?"], 
-      }).go();
-    });
-  </script>
 </head>
 <body>
   <h1>Rock, Paper, Scissors</h1>
@@ -32,6 +24,7 @@
     <a href="https://www.vecteezy.com/free-png/old-monitor" class="attributions">Old Monitor PNGs by Vecteezy</a>
     </div>
   </section>
+  
   <section class="yn-btns hidden">
     <button id="yes">
       Yes
@@ -40,7 +33,9 @@
       No
     </button>
   </section>
-  <section class="choices-conianer hidden">
+  <script src="js/btns.js"></script>
+
+  <section id="choices-container" class="hidden">
     <div class="rock-img-container">
       <img src="images/rock.png" alt="rock" class="choices" id="rock">
       <a href="https://www.vecteezy.com/free-png/rock" class="attributions">Rock PNGs by Vecteezy</a>
@@ -54,5 +49,7 @@
       <a href="https://www.vecteezy.com/free-png/scissors" class="attributions">Scissors PNGs by Vecteezy</a>
     </div>
   </section>
+  <script src="js/options.js"></script>
+
 </body>
 </html>
