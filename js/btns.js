@@ -37,8 +37,7 @@ function yesBTNPressed() {
   btncontainer.classList.remove("visible");
   btncontainer.classList.add("hidden");
   typeItText(computerText);
-  setTimeout(showChoices, 3000)
-  //showChoices();
+  setTimeout(showChoices, 3000);
 }
 
 function noBTNPressed() {
