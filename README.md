@@ -1,3 +1,3 @@
-#Rock Paper Scissors
+# Rock Paper Scissors
 
-This project is aimed to help me learn javascript. 
+The goal of this project is to help me learn JavaScript. 
