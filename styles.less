@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+@font-face {
+  font-family: "RetroGame";
+  src: url(fonts/Retro-Gaming.ttf) format(truetype);
+}
+
+#cursor() {
+  .normal{
+    cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABFklEQVRYR9WXURLDIAhE6/0PbSdOtUpcd1Gnpv1KGpTHBpCE1/cXq+vrMph7dGvXZTtpfW10DCA5jrH1H0Jhs5E0hnZdCR+vb5S8Nn8mQCeS9BdSalYJqMBjAGzq59xAESN7VFVUgV8AZB/dZBR7QTFDCqGquvUBVVoEtgIwpQRzmANSFHgWQKExHdIrPeuMvQNDarXe6nC/AutgV3JW+6bgqQLeV8FekRtgV+ToDKEKnACYKsfZjjkam7a0ZpYTytwmgainpC3HvwBocgKOxqRjehoR9DFKNFYtOwCGYCszobeCbl26N6yyQ6g8X/Wex/rBPsNEV6qAMaJPMynIHQCoSqS9JSMmwef51LflTgCRszU7DvAGiV6mHWfsaVUAAAAASUVORK5CYII=),
+    auto;
+  }
+
+  .pointer {
+    cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAzElEQVRYR+2X0Q6AIAhF5f8/2jYXZkwEjNSVvVUjDpcrGgT7FUkI2D9xRfQETwNIiWO85wfINfQUEyxBG2ArsLwC0jioGt5zFcwF4OYDPi/mBYKm4t0U8ATgRm3ThFoAqkhNgWkA0jJLvaOVSs7j3qMnSgXWBMiWPXe94QqMBMBc1VZIvaTu5u5pQewq0EqNZvIEMCmxAawK0DNkay9QmfFNAJUXfgGgUkLaE7j/h8fnASkxHTz0DGIBMCnBeeM7AArpUd3mz2x3C7wADglA8BcWMZhZAAAAAElFTkSuQmCC)
+        14 0,
+      pointer;
+  }
+}
+
+html {
+  #cursor.normal();
+}
+
+
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: flex;
+}
+
+body {
+  background-color: #f2c665;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+  font-family: "RetroGame";
+  font-size: 60px;
+}
+
+p {
+  text-align: center;
+  font-family: "Press Start 2P";
+}
+
+#computer-text {
+  padding: 0 50px;
+}
+
+.opponents-container {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+  border: 2px solid black;
+}
+
+.computer-container,
+.rock-img-container,
+.paper-img-container,
+.scissors-img-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.points {
+  font-size: 25px;
+}
+
+#VS {
+  text-transform: uppercase;
+  font-size: 60px;
+}
+
+.yn-btns {
+  justify-content: center;
+  margin: 40px 0;
+
+  button {
+    padding: 10px 50px;
+    font-family: "Press Start 2P";
+    font-size: 50px;
+    border: 5px solid black;
+    border-image-slice: 2;
+    border-image-width: 2;
+    border-image-repeat: stretch;
+    border-image-source: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8" ?><svg version="1.1" width="5" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2 1 h1 v1 h-1 z M1 2 h1 v1 h-1 z M3 2 h1 v1 h-1 z M2 3 h1 v1 h-1 z" fill="rgb(33,37,41)" /></svg>');
+    border-image-outset: 2;
+    position: relative;
+    display: inline-block;
+    margin: 4px;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border-style: solid;
+    border-width: 4px;
+
+    &:after {
+      position: absolute;
+      top: -4px;
+      right: -4px;
+      bottom: -4px;
+      left: -4px;
+      content: "";
+    }
+
+    &:hover {
+      #cursor.pointer();
+    }
+  }
+
+  #yes {
+    margin-right: 80px;
+    background-color: #99beb7;
+    
+    &:hover {
+      background-color: #c7dbda;
+      color: gray;
+    }
+
+    &:after {
+      box-shadow: inset -4px -4px #4d5f5c;
+    }
+  }
+
+  #no {
+    background-color: #ca3c4a;
+
+    &:hover {
+      background-color: #d9737d;
+      color: gray;
+    }
+
+    &:after {
+      box-shadow: inset -4px -4px #651e25;
+    }
+  }
+
+}
+
+/*Button styles and cursor:
+Retro Button
+https://codepen.io/andre-versteeg/pen/GRgyXKj */
+
+
+.attributions {
+  font-size: 10px;
+
+  &:hover {
+    #cursor.pointer();
+  }
+}
+
+#choices-container {
+  margin: 40px 0;
+  justify-content: space-evenly;
+
+  & img:hover {
+    #cursor.pointer;
+    background-color: rgba(211, 211, 211, 0.5);
+  }
+}

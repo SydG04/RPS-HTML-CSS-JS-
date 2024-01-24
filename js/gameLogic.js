@@ -27,6 +27,7 @@ function determineWinner(userChoice, computerChoice) {
   //tie
   if (userChoice == computerChoice) {
     console.log("tie"); 
+    computerText
   }
   //user wins
   else if (computerChoice in outcomes[userChoice]) {
