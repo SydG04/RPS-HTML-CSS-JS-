@@ -13,4 +13,4 @@ I am still in the VERY beginning stages. It still needs logic. As you can see fr
 
 ### Attributions for Images
 [Flatart](https://www.iconfinder.com/Flatart)
-[Pixelbazaar](https://www.iconfinder.com/pixelbazaar)
+[Pixel Bazaar](https://www.iconfinder.com/pixelbazaar)
