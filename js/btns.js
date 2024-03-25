@@ -14,6 +14,8 @@ typeItText(computerText);
 yesBtn.addEventListener("click",yesBTNPressed);
 noBtn.addEventListener("click", noBTNPressed);
 
+
+//types out the computerText
 function typeItText(computerText) {
   if (typeItInstance) {
     typeItInstance.reset();
@@ -40,6 +42,7 @@ function yesBTNPressed() {
   setTimeout(showChoices, 3000);
 }
 
+//no button
 function noBTNPressed() {
   computerText = "No? Oh, I get it. Not everyone is comfortable facing certain defeat. It's okay; I'll be here, patiently waiting for someone brave enough to challenge the inevitable. Take your time.";
   btncontainer.classList.remove("visible");

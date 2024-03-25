@@ -1,7 +1,7 @@
 let choicesContainer = document.getElementById("choices-container");
-var rock = document.getElementById("rock");
-var paper = document.getElementById("paper");
-var scissors = document.getElementById("scissors");
+let rock = document.getElementById("rock");
+let paper = document.getElementById("paper");
+let scissors = document.getElementById("scissors");
 
 var choices = ["rock", "paper", "scissors"];
 //event listeners

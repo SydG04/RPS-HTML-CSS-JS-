@@ -12,7 +12,7 @@ function handleComputerChoice(computerChoice) {
   determineWinner(userChoice, computerChoice);
 }
 
-let result = determineWinner(userChoice,computerChoice);
+var result = determineWinner(userChoice,computerChoice);
 
 
 function determineWinner(userChoice, computerChoice) {
@@ -24,17 +24,25 @@ function determineWinner(userChoice, computerChoice) {
     'spock': ['rock', 'scissors']
   }
 
+  if (userChoice == undefined && computerChoice == undefined) {
+    console.log("undefined");
+  }
   //tie
-  if (userChoice == computerChoice) {
-    console.log("tie"); 
-    computerText
+  else if (userChoice == computerChoice) {
+    console.log("tie");
+    result = "tie";
+    return winner(result);
   }
   //user wins
-  else if (computerChoice in outcomes[userChoice]) {
+  else if (outcomes[userChoice].includes(computerChoice)) {
     console.log("user");
+    result = "user";
+    return winner(result);
   }
   //computer wins
   else {
     console.log("computer");
+    result = "computer";
+    return winner(result);
   }
 }
