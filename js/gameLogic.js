@@ -1,21 +1,28 @@
-//determine winner
-//fetch userchoice and computer choice
-
-function handleUserChoice(choice) {
-  userChoice = choice;
-  console.log("User's choice:" + userChoice);
-  determineWinner(userChoice, computerChoice);
+//function is only active once a user makes a choice
+function playGame(userChoice) {
+    let computerChoice = getComputerChoice();
+    console.log ("User Choice:", userChoice, "Computer Choice:", computerChoice);
+    determineWinner(userChoice,computerChoice);
+  
 }
 
-function handleComputerChoice(computerChoice) {
-  console.log("Computer's choice:" + computerChoice); 
-  determineWinner(userChoice, computerChoice);
-}
+// function handleUserChoice(choice) {
+//   userChoice = choice;
+//   console.log("User's choice:" + userChoice);
+//   determineWinner(userChoice, computerChoice);
+// }
 
-var result = determineWinner(userChoice,computerChoice);
+// function handleComputerChoice(computerChoice) {
+//   console.log("Computer's choice:" + computerChoice); 
+//   determineWinner(userChoice, computerChoice);
+// }
+
 
 
 function determineWinner(userChoice, computerChoice) {
+  var result;
+
+  // * I added extra choices for future features
   outcomes = {
     'rock': ['scissors', 'lizard'],
     'paper': ['rock', 'spock'],
@@ -24,11 +31,11 @@ function determineWinner(userChoice, computerChoice) {
     'spock': ['rock', 'scissors']
   }
 
-  if (userChoice == undefined && computerChoice == undefined) {
-    console.log("undefined");
-  }
+  // if (userChoice == undefined && computerChoice == undefined) {
+  //   console.log("undefined");
+  // }
   //tie
-  else if (userChoice == computerChoice) {
+  if (userChoice == computerChoice) {
     console.log("tie");
     result = "tie";
     return winner(result);

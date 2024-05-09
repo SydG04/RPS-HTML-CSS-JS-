@@ -1,6 +1,8 @@
 var dialogue = document.getElementById("computer-text");
 var computerText = dialogue.textContent;
 let btncontainer = document.querySelector(".yn-btns");
+let endGameBtnContainer = document.querySelector(".eg-btns");
+let endGameBtn = document.getElementById("endgame");
 let yesBtn = document.getElementById("yes");
 let noBtn = document.getElementById("no");
 let typeItInstance;
@@ -13,6 +15,7 @@ typeItText(computerText);
 //events listener
 yesBtn.addEventListener("click",yesBTNPressed);
 noBtn.addEventListener("click", noBTNPressed);
+endGameBtn.addEventListener("click",endGameBTNPressed);
 
 
 //types out the computerText
@@ -48,4 +51,19 @@ function noBTNPressed() {
   btncontainer.classList.remove("visible");
   btncontainer.classList.add("hidden");
   typeItText(computerText);
+}
+
+//fix this
+//making end game button visible
+function endGameBTN() {
+  endGameBtnContainer.classList.remove("hidden");
+  endGameBtnContainer.classList.add("visible");
+}
+
+//when end game is pressed
+function endGameBTNPressed() {
+  endGameBtnContainer.classList.remove("visible");
+  endGameBtnContainer.classList.add("hidden");
+  //add a function that display reaction text to score. 
+  //Make that in the score file. Call it
 }

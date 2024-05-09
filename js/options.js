@@ -4,34 +4,36 @@ let paper = document.getElementById("paper");
 let scissors = document.getElementById("scissors");
 
 var choices = ["rock", "paper", "scissors"];
-//event listeners
 
-var userChoice, computerChoice;
+// var userChoice, computerChoice;
 
 function showChoices() {
   choicesContainer.classList.remove("hidden");
   choicesContainer.classList.add("visible");
-  getUserChoice();
-  getComputerChoice();
 }
 
-function getUserChoice() {
-  rock.addEventListener("click", function() {
-    handleUserChoice("rock");
-  });
+//event listeners for choices
+rock.addEventListener("click", function() {
+  getUserChoice("rock");
+});
 
-  paper.addEventListener("click", function () {
-    handleUserChoice("paper");
-  });
+paper.addEventListener("click", function () {
+  getUserChoice("paper");
+});
 
-  scissors.addEventListener("click", function () {
-    handleUserChoice("scissors");
-  });
+scissors.addEventListener("click", function () {
+  getUserChoice("scissors");
+});
+
+//handles and passes userChoice
+function getUserChoice(userChoice) {
+  playGame(userChoice);
 }
 
+//handles and passes computerChoice
 function getComputerChoice() {
-  var computerChoiceIndex = Math.floor(Math.random() * choices.length);
+  let  computerChoiceIndex = Math.floor(Math.random() * choices.length);
   computerChoice = choices[computerChoiceIndex];
-  handleComputerChoice(computerChoice);
+  return computerChoice;
 }
 
