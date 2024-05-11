@@ -1,10 +1,25 @@
 # Rock Paper Scissors (Web Version)
 Hello everyone!
 
+## Description 
 This project is an alternate version of my Python RPS game. Since I recently learned Javascript, I made a web version of my RPS game. 
+
+## Goals
 The goal of this project is to help me learn JavaScript. 
 
-I am still in the VERY beginning stages. It still needs logic.
+I am still in the VERY beginning stages. Logic has been added, but there are several features I am hoping to implement now or further in development: 
+
+Simple tasks (implementation is very soon): 
+1. Get rid of choices after each time the user makes a choice (Unsure)
+2. Add end game button after second round AND make it stay (in progress, current challenge)
+3. Add texture to background (non-priority)
+4.  Add a Play Again? button
+
+Advanced tasks (implementation is WAY in the future, usually after simple tasks are done)
+1. Have user input how many rounds they want or make it be endless
+2. Add more than one background and give user the choice to change them
+3. I want to change the icons to 8bit
+4. Maybe make my own icons where I can have the User and Computer Icon react depending on if they won or not 
 
 ## What I used
 ![HTML](https://github.com/SydG04/cis170/assets/113223819/4991ce7a-7b9d-41c6-a4d1-82cd633bb50a)

@@ -15,7 +15,20 @@ typeItText(computerText);
 //events listener
 yesBtn.addEventListener("click",yesBTNPressed);
 noBtn.addEventListener("click", noBTNPressed);
-endGameBtn.addEventListener("click",endGameBTNPressed);
+endGameBtn.addEventListener("click",function() {
+  endGameBtnContainer.classList.remove("visible");
+  endGameBtnContainer.classList.add("hidden");
+
+  //hide ALL buttons
+  choicesContainer.classList.remove("visible");
+  choicesContainer.classList.add("hidden");
+
+  //computer reactions
+  reactions(computerText);
+
+  //add a function that display reaction text to score. 
+  //Make that in the score file. Call it
+});
 
 
 //types out the computerText
@@ -30,9 +43,21 @@ function typeItText(computerText) {
   }).go()
 }
 
-//display buttons
+//display y/n buttons
 function showBTNS() {
   btncontainer.classList.add("visible");
+}
+
+
+
+//* currently not being used
+function hideChoicesTemporarily() {
+  //hide the choices buttons
+  choicesContainer.classList.remove("visible");
+  choicesContainer.classList.add("hidden");
+  setTimeout(() => {
+    choicesContainer.classList.remove("hidden");
+    choicesContainer.classList.add("visible");}, 3000);
 }
 
 //what happens when you press each button
@@ -53,17 +78,14 @@ function noBTNPressed() {
   typeItText(computerText);
 }
 
-//fix this
+//! When I call this function, it does not work for some reason
 //making end game button visible
-function endGameBTN() {
+function showEndGameBTN() {
   endGameBtnContainer.classList.remove("hidden");
   endGameBtnContainer.classList.add("visible");
 }
 
 //when end game is pressed
-function endGameBTNPressed() {
-  endGameBtnContainer.classList.remove("visible");
-  endGameBtnContainer.classList.add("hidden");
-  //add a function that display reaction text to score. 
-  //Make that in the score file. Call it
-}
+
+
+  

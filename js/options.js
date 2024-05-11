@@ -28,6 +28,10 @@ scissors.addEventListener("click", function () {
 //handles and passes userChoice
 function getUserChoice(userChoice) {
   playGame(userChoice);
+  //hide choices button after a choice is made
+
+  //? Not sure if this is good or not to add...
+  //hideChoicesTemporarily();
 }
 
 //handles and passes computerChoice

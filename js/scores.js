@@ -31,7 +31,5 @@ function winner(result) {
   }
 
   //add a round after a choice is made
-  // round += 1;
-  // console.log(round);
-  // checkRound();
+  checkRound();
 }

@@ -34,6 +34,7 @@ function determineWinner(userChoice, computerChoice) {
   // if (userChoice == undefined && computerChoice == undefined) {
   //   console.log("undefined");
   // }
+  
   //tie
   if (userChoice == computerChoice) {
     console.log("tie");
