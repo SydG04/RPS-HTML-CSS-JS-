@@ -13,7 +13,6 @@ Simple tasks (implementation is very soon):
 1. Get rid of choices after each time the user makes a choice (Unsure)
 2. Add end game button after second round AND make it stay (in progress, current challenge)
 3. Add texture to background (non-priority)
-4.  Add a Play Again? button
 
 Advanced tasks (implementation is WAY in the future, usually after simple tasks are done)
 1. Have user input how many rounds they want or make it be endless
