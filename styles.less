@@ -1,3 +1,4 @@
+@import "variables.less";
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
 @font-face {
@@ -6,9 +7,9 @@
 }
 
 #cursor() {
-  .normal{
+  .normal {
     cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABFklEQVRYR9WXURLDIAhE6/0PbSdOtUpcd1Gnpv1KGpTHBpCE1/cXq+vrMph7dGvXZTtpfW10DCA5jrH1H0Jhs5E0hnZdCR+vb5S8Nn8mQCeS9BdSalYJqMBjAGzq59xAESN7VFVUgV8AZB/dZBR7QTFDCqGquvUBVVoEtgIwpQRzmANSFHgWQKExHdIrPeuMvQNDarXe6nC/AutgV3JW+6bgqQLeV8FekRtgV+ToDKEKnACYKsfZjjkam7a0ZpYTytwmgainpC3HvwBocgKOxqRjehoR9DFKNFYtOwCGYCszobeCbl26N6yyQ6g8X/Wex/rBPsNEV6qAMaJPMynIHQCoSqS9JSMmwef51LflTgCRszU7DvAGiV6mHWfsaVUAAAAASUVORK5CYII=),
-    auto;
+      auto;
   }
 
   .pointer {
@@ -21,8 +22,6 @@
 html {
   #cursor.normal();
 }
-
-
 
 .hidden {
   display: none;
@@ -49,7 +48,9 @@ p {
 }
 
 #computer-text {
-  padding: 0 50px;
+  padding: 0 1.5rem;
+  margin: auto;
+  line-height: 1.5rem;
 }
 
 .opponents-container {
@@ -62,16 +63,19 @@ p {
 img {
   width: 200px;
   height: 200px;
-  border: 2px solid black;
+  //border: 2px solid black;
+
+  @media (@small) {
+    width: 100px;
+    height: 100px;
+  }
 }
 
-.computer-container,
-.rock-img-container,
-.paper-img-container,
-.scissors-img-container {
+div:has(.attributions) {
   display: flex;
-  flex-direction: column;
   text-align: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .points {
@@ -81,18 +85,24 @@ img {
 #VS {
   text-transform: uppercase;
   font-size: 60px;
+
+  @media (@small) {
+    font-size: 40px;
+  }
 }
 
-.yn-btns, 
+.yn-btns,
 .eg-btn,
 .pa-btn {
-  justify-content: center;
+  justify-content: space-evenly;
   margin: 40px 0;
+  flex-wrap: wrap;
+  gap: 1rem 2.5rem;
 
   button {
     padding: 10px 50px;
     font-family: "Press Start 2P";
-    font-size: 50px;
+    font-size: 3.125rem;
     border: 5px solid black;
     border-image-slice: 2;
     border-image-width: 2;
@@ -124,11 +134,14 @@ img {
       #cursor.pointer();
     }
   }
+/*
+  Hover: 30%
+  Outline: 50%
+*/
 
   #yes {
-    margin-right: 80px;
     background-color: #99beb7;
-    
+
     &:hover {
       background-color: #b8d2cd;
       color: gray;
@@ -153,37 +166,50 @@ img {
   }
 
   #endgame {
-    background-color: #999999;
+    background-color: #e3dec8;
 
     &:hover {
-      background-color: #b8b8b8;
+      background-color: #ebe8d9;
       color: gray;
     }
 
     &:after {
-      box-shadow: inset -4px -4px #4d4d4d;
+      box-shadow: inset -4px -4px #726f64;
     }
   }
 
   #playagain {
-    background-color: #3392FF;
+    background-color: #2a9d8f;
 
     &:hover {
-      background-color: #70b3ff;
+      background-color: #6abab1;
       color: gray;
     }
 
     &:after {
-      box-shadow: inset -4px -4px #1a4980;
+      box-shadow: inset -4px -4px #154f48;
     }
   }
+}
 
+.eg-btn,
+.pa-btn {
+  @media (@small) {
+    padding: 10px 20px;
+
+  }
+
+  button {
+    @media (@small) {
+      font-size: 2.5rem;
+
+  }
+}
 }
 
 /*Button styles and cursor:
 Retro Button
 https://codepen.io/andre-versteeg/pen/GRgyXKj */
-
 
 .attributions {
   font-size: 10px;

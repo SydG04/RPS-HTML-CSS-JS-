@@ -13,12 +13,14 @@ I am still in the VERY beginning stages. Logic has been added, but there are sev
 1. Get rid of choices after each time the user makes a choice (Unsure)
 2. Add end game button after second round AND make it stay (in progress, current challenge)
 3. Add texture to background (non-priority)
+4. Add some responsiveness
 
 <ins>Advanced tasks (implementation is WAY in the future, usually after simple tasks are done)</ins>:
 1. Have user input how many rounds they want or make it be endless
 2. Add more than one background and give user the choice to change them
 3. I want to change the icons to 8bit
 4. Maybe make my own icons where I can have the User and Computer Icon react depending on if they won or not 
+5. Give user a choice to change their user profile (unsure)
 
 ## What I used
 ![HTML](https://github.com/SydG04/cis170/assets/113223819/4991ce7a-7b9d-41c6-a4d1-82cd633bb50a)

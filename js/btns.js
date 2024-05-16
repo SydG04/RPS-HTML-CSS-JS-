@@ -72,6 +72,8 @@ function noBTNPressed() {
   btncontainer.classList.remove("visible");
   btncontainer.classList.add("hidden");
   typeItText(computerText);
+
+  setTimeout(showPlayAgainBTN, 3000);
 }
 
 //making end game button visible
